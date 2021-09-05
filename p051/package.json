@@ -1,0 +1,18 @@
+{
+  "name": "p051",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "run": "node index.js",
+    "compile": "tsc -w",
+    "init": "npm install & tsc --init"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^16.7.10",
+    "typescript": "^4.4.2"
+  }
+}
