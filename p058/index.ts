@@ -1,9 +1,9 @@
 class SuperSet<T> {
     sets: Array<Set<T>>
 
-    constructor(input?: T|Array<T>) {
+    constructor(input?: T | Array<T>) {
         this.sets = [new Set()]
-        if (typeof(input) === 'undefined')
+        if (typeof (input) === 'undefined')
             return
         else if (Array.isArray(input))
             for (let value of input)
@@ -19,7 +19,7 @@ class SuperSet<T> {
     add(value: T): void {
         if (!this.has(value)) {
             try {
-                this.sets[this.sets.length-1].add(value)
+                this.sets[this.sets.length - 1].add(value)
             } catch (RangeError) {
                 this.sets.push(new Set([value]))
             }
@@ -59,8 +59,8 @@ while (prime_count / total >= 0.1 || i < 50) {
         i += step_size
     }
     step_size += 2
-    if (total % 1000 == 0) {
-        console.log(total, prime_count, prime_count / total, primes.length)
+    if (total % 100 == 0) {
+        console.log(`total: ${total}, prime_count: ${prime_count}, prime_count / total: ${prime_count / total}, primes.length: ${primes.length}`)
     }
 }
-console.log(step_size - 1)
+console.log(step_size - 3)
